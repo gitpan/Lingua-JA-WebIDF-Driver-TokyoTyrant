@@ -27,11 +27,11 @@ no_index:
     - xt
 requires:
   Carp: 0
-  Lingua::JA::WebIDF: 0.31
+  Lingua::JA::WebIDF: 0.32
   TokyoTyrant: 0
   perl: 5.8.1
 resources:
   bugtracker: https://github.com/pawa-/Lingua-JA-WebIDF-Driver-TokyoTyrant/issues
   license: http://dev.perl.org/licenses
   repository: https://github.com/pawa-/Lingua-JA-WebIDF-Driver-TokyoTyrant
-version: 0.01
+version: 0.02
