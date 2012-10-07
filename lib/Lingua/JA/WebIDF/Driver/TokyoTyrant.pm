@@ -7,7 +7,8 @@ use warnings;
 use Carp ();
 use TokyoTyrant;
 
-our $VERSION = '0.02';
+our $VERSION = '0.10';
+push(@Lingua::JA::WebIDF::NETWORK_INTERFACE_PLUGIN, 'TokyoTyrant');
 
 
 sub fetch_df
@@ -70,6 +71,7 @@ sub db_close
 }
 
 1;
+
 __END__
 
 =encoding utf8
@@ -78,19 +80,13 @@ __END__
 
 Lingua::JA::WebIDF::Driver::TokyoTyrant - TokyoTyrant plugin for Lingua::JA::WebIDF
 
-=for test_synopsis
-my ($appid);
-
 =head1 SYNOPSIS
 
   use Lingua::JA::WebIDF;
 
   my $webidf = Lingua::JA::WebIDF->new(
-      api      => 'Yahoo',
-      appid    => $appid,
       driver   => 'TokyoTyrant',
       df_file  => 'localhost:1978',
-      fetch_df => 1,
   );
 
   $webidf->db_open;
@@ -108,9 +104,11 @@ pawa E<lt>pawapawa@cpan.orgE<gt>
 
 =head1 SEE ALSO
 
-L<Lingua::JA::WebIDF>
+L<Lingua::JA::TermExtractor>
 
 L<Lingua::JA::TFWebIDF>
+
+L<Lingua::JA::WebIDF>
 
 Tokyo Tyrant: L<http://fallabs.com/tokyotyrant/>
 
